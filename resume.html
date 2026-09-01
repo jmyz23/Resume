@@ -1,0 +1,254 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Resume - Jieming Zhang</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.4in 0.5in;
+    }
+
+    @media print {
+
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background: #fff;
+      line-height: 1.35;
+      font-size: 9.8pt;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 21pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f172a;
+    }
+
+    .contact-info {
+      font-size: 9pt;
+      color: #475569;
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    .contact-info span {
+      margin: 0 5px;
+    }
+
+    .contact-info a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 11px;
+      page-break-inside: avoid;
+    }
+
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #1e3a8a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 10pt;
+      color: #0f172a;
+    }
+
+    .item-sub {
+      display: flex;
+      justify-content: space-between;
+      font-style: italic;
+      font-size: 9pt;
+      color: #475569;
+      margin-bottom: 3px;
+    }
+
+    .block {
+      margin-bottom: 6px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 18px;
+      margin-bottom: 3px;
+    }
+
+    li {
+      margin-bottom: 2px;
+      font-size: 9.2pt;
+      color: #334155;
+    }
+
+    .skills-row {
+      font-size: 9.2pt;
+      margin-bottom: 3.5px;
+      color: #334155;
+    }
+
+    .skills-row strong {
+      color: #0f172a;
+      display: inline-block;
+      width: 130px;
+    }
+
+    .coursework {
+      font-size: 9.2pt;
+      color: #334155;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Jieming Zhang</h1>
+    <div class="contact-info">
+      <span>703-232-6926</span> |
+      <span><a href="mailto:jiemingzhang23@gmail.com">jiemingzhang23@gmail.com</a></span> |
+      <span><a href="https://github.com/jmyz23">github.com/jmyz23</a></span> |
+      <span>Charlottesville, VA</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item-header">
+      <span>University of Virginia</span>
+      <span>Charlottesville, VA</span>
+    </div>
+    <div class="item-sub">
+      <span>B.S. Computer Engineering &amp; B.S. Electrical Engineering</span>
+      <span>Expected Graduation: May 2029</span>
+    </div>
+    <div class="coursework">
+      <strong>Relevant Coursework:</strong> Computer Systems Organization, Electric Circuits, Digital Logic Design, CPU Architecture, Ordinary Differential Equations, Multivariable Calculus, Data Structures &amp; C++
+    </div>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-row"><strong>Languages:</strong> C++, Python, VHDL, Java</div>
+    <div class="skills-row"><strong>Hardware &amp; EDA:</strong> Custom PCB Design, Power Management (3.7V LiPo to 3.3V LDO), KiCad, Altium, Quartus, ModelSim, ESP32, BNO055 IMU, MicroSD SPI, Oscilloscopes, Multimeters</div>
+    <div class="skills-row"><strong>Protocols &amp; Tools:</strong> I2C, SPI, UART, CAN Bus, Fusion 360, Git, Matplotlib, SciPy</div>
+    <div class="skills-row"><strong>Concepts:</strong> Low-Level Firmware, Digital Logic, CPU Architecture, Signal Processing, Sensor Fusion</div>
+  </section>
+
+  <section>
+    <h2>Technical Projects</h2>
+
+    <div class="block">
+      <div class="item-header">
+        <span>IoT Golf Swing Analyzer &amp; Visualizer Prototype</span>
+        <span>Summer 2026</span>
+      </div>
+      <div class="item-sub">
+        <span>Embedded Hardware, Firmware &amp; Python Analytics · Personal Project</span>
+      </div>
+      <ul>
+        <li>Designed and routed a custom PCB featuring power management circuits to convert a 3.7V LiPo battery input to a regulated 3.3V rail for an ESP32 microcontroller.</li>
+        <li>Developed non-blocking C++ embedded firmware using ESP32 to interface with a BNO055 9-axis IMU over I2C and stream 100Hz 3D quaternion and accelerometer data to custom SPI MicroSD storage.</li>
+        <li>Created a 3D Python telemetry engine using Matplotlib and SciPy to process raw quaternions, diminish gravitational drift, estimate clubhead velocity, and render dynamic swing trajectories.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <div class="item-header">
+        <span>CPU Datapath &amp; Controller Design</span>
+        <span>Spring 2026</span>
+      </div>
+      <div class="item-sub">
+        <span>UVA ECE Coursework</span>
+      </div>
+      <ul>
+        <li>Architected a multi-component CPU datapath in structural VHDL, incorporating ALU functions, register banks, and control sequencers.</li>
+        <li>Debugged timing signals and uninitialized control states in ModelSim by analyzing testbench reset pulses and waveform traces.</li>
+        <li>Synthesized digital logic structures onto FPGA target devices using Intel Quartus.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <div class="item-header">
+        <span>Automated Physical Sink Shutoff System</span>
+        <span>Fall 2025</span>
+      </div>
+      <div class="item-sub">
+        <span>Introductory Engineering Design Project · UVA</span>
+      </div>
+      <ul>
+        <li>Engineered an external retrofitted automated shutoff mechanism for standard sink handles without internal plumbing access.</li>
+        <li>Integrated an ultrasonic distance sensor to detect user presence and trigger automated shutoff sequences.</li>
+        <li>Designed and calibrated a servo-driven mechanical actuation arm to physically manipulate the external water valve handle.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Engineering Experience</h2>
+    <div class="block">
+      <div class="item-header">
+        <span>Virginia Motorsports (Formula SAE)</span>
+        <span>Fall 2025 – Present</span>
+      </div>
+      <div class="item-sub">
+        <span>Data Acquisition (DAQ) Subteam Member | University of Virginia</span>
+      </div>
+      <ul>
+        <li>Design schematics and multi-layer PCBs using Altium and KiCad for sensor integration and data logging on an all-electric FSAE racecar.</li>
+        <li>Build electrical wiring harnesses and integrate chassis hardware components to ensure noise-resistant telemetry transmission.</li>
+        <li>Model custom mechanical mounting enclosures in Fusion 360 for DAQ subteam vehicle installations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership &amp; Experience</h2>
+    <div class="block">
+      <div class="item-header">
+        <span>Mathnasium</span>
+        <span>Fall 2022 – Jan 2023</span>
+      </div>
+      <div class="item-sub">
+        <span>Math Tutor &amp; Trainer</span>
+      </div>
+      <ul>
+        <li>Instructed up to 16 students per session across subjects ranging from arithmetic through AP Calculus.</li>
+        <li>Onboarded and trained new instructional staff on curriculum delivery and student engagement strategies.</li>
+      </ul>
+    </div>
+  </section>
+
+
+
+</body></html>
