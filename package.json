@@ -1,0 +1,10 @@
+{
+  "name": "resume-pdf-generator",
+  "private": true,
+  "scripts": {
+    "build:pdf": "node generate-pdf.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.1"
+  }
+}

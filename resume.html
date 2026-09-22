@@ -6,23 +6,6 @@
       size: letter;
       margin: 0.4in 0.5in;
     }
-    @media print {
-      @page {
-        margin: 0; /* Clears default browser headers, footers, and margins */
-      }
-      body {
-        padding: 0.5in; /* Restores clean content padding for page edges */
-      }
-    }
-    @media print {
-
-      html,
-      body {
-        height: 100%;
-        overflow: hidden;
-      }
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -69,7 +52,7 @@
     }
 
     section {
-      margin-bottom: 11px;
+      margin-bottom: 8px;
       page-break-inside: avoid;
     }
 
@@ -81,7 +64,7 @@
       color: #1e3a8a;
       border-bottom: 1.5px solid #cbd5e1;
       padding-bottom: 2px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .item-header {
@@ -90,6 +73,18 @@
       font-weight: 700;
       font-size: 10pt;
       color: #0f172a;
+    }
+
+    .item-header > span:first-child,
+    .item-sub > span:first-child {
+      min-width: 0;
+    }
+
+    .item-header > span:last-child,
+    .item-sub > span:last-child {
+      flex-shrink: 0;
+      margin-left: 12px;
+      white-space: nowrap;
     }
 
     .item-sub {
@@ -102,7 +97,7 @@
     }
 
     .block {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     ul {
@@ -112,7 +107,7 @@
     }
 
     li {
-      margin-bottom: 2px;
+      margin-bottom: 1px;
       font-size: 9.2pt;
       color: #334155;
     }
@@ -167,7 +162,7 @@
   <section>
     <h2>Technical Skills</h2>
     <div class="skills-row"><strong>Languages:</strong> C++, Python, VHDL, Java</div>
-    <div class="skills-row"><strong>Hardware &amp; EDA:</strong> Custom PCB Design, Power Management (3.7V LiPo to 3.3V LDO), KiCad, Altium, Quartus, ModelSim, ESP32, BNO055 IMU, MicroSD SPI, Oscilloscopes, Multimeters</div>
+    <div class="skills-row"><strong>Hardware &amp; EDA:</strong> Custom PCB Design, Power Management (3.7V LiPo to 3.3V LDO), KiCad, Altium, Quartus, ModelSim, ESP32, BNO055 IMU, MicroSD SPI, Multimeters</div>
     <div class="skills-row"><strong>Protocols &amp; Tools:</strong> I2C, SPI, UART, CAN Bus, Fusion 360, Git, Matplotlib, SciPy</div>
     <div class="skills-row"><strong>Concepts:</strong> Low-Level Firmware, Digital Logic, CPU Architecture, Signal Processing, Sensor Fusion</div>
   </section>
@@ -181,12 +176,12 @@
         <span>Summer 2026</span>
       </div>
       <div class="item-sub">
-        <span>Embedded Hardware, Firmware &amp; Python Analytics · Personal Project</span>
+        <span>Embedded Hardware, Firmware &amp; Python Analytics &middot; Personal Project</span>
       </div>
       <ul>
-        <li>Designed and routed a custom PCB featuring power management circuits to convert a 3.7V LiPo battery input to a regulated 3.3V rail for an ESP32 microcontroller.</li>
-        <li>Developed non-blocking C++ embedded firmware using ESP32 to interface with a BNO055 9-axis IMU over I2C and stream 100Hz 3D quaternion and accelerometer data to custom SPI MicroSD storage.</li>
-        <li>Created a 3D Python telemetry engine using Matplotlib and SciPy to process raw quaternions, diminish gravitational drift, estimate clubhead velocity, and render dynamic swing trajectories.</li>
+        <li>Designed and routed a custom ESP32 PCB with 3.7V LiPo-to-3.3V power management and interfaces for the IMU and MicroSD logger.</li>
+        <li>Built non-blocking C++ firmware to log 100 Hz BNO055 IMU quaternion and accelerometer data over I2C to SPI MicroSD storage.</li>
+        <li>Created a Python telemetry engine using Matplotlib and SciPy to process raw quaternions, correct gravitational drift, estimate clubhead velocity, and render 3D swing trajectories.</li>
       </ul>
     </div>
 
@@ -199,9 +194,8 @@
         <span>UVA ECE Coursework</span>
       </div>
       <ul>
-        <li>Architected a multi-component CPU datapath in structural VHDL, incorporating ALU functions, register banks, and control sequencers.</li>
-        <li>Debugged timing signals and uninitialized control states in ModelSim by analyzing testbench reset pulses and waveform traces.</li>
-        <li>Synthesized digital logic structures onto FPGA target devices using Intel Quartus.</li>
+        <li>Architected a structural VHDL CPU datapath with ALU functions, register banks, and control sequencers.</li>
+        <li>Debugged timing and control-state faults in ModelSim using testbench reset pulses and waveform traces; synthesized the design in Intel Quartus.</li>
       </ul>
     </div>
 
@@ -211,12 +205,12 @@
         <span>Fall 2025</span>
       </div>
       <div class="item-sub">
-        <span>Introductory Engineering Design Project · UVA</span>
+        <span>Introductory Engineering Design Project &middot; UVA</span>
       </div>
       <ul>
-        <li>Engineered an external retrofitted automated shutoff mechanism for standard sink handles without internal plumbing access.</li>
+        <li>Engineered a retrofit automated shutoff mechanism for standard sink handles without internal plumbing access.</li>
         <li>Integrated an ultrasonic distance sensor to detect user presence and trigger automated shutoff sequences.</li>
-        <li>Designed and calibrated a servo-driven mechanical actuation arm to physically manipulate the external water valve handle.</li>
+        <li>Designed and calibrated a servo-driven mechanical arm to actuate the external water valve handle.</li>
       </ul>
     </div>
   </section>
@@ -226,15 +220,15 @@
     <div class="block">
       <div class="item-header">
         <span>Virginia Motorsports (Formula SAE)</span>
-        <span>Fall 2025 – Present</span>
+        <span>Fall 2025 - Present</span>
       </div>
       <div class="item-sub">
         <span>Data Acquisition (DAQ) Subteam Member | University of Virginia</span>
       </div>
       <ul>
-        <li>Design schematics and multi-layer PCBs using Altium and KiCad for sensor integration and data logging on an all-electric FSAE racecar.</li>
-        <li>Build electrical wiring harnesses and integrate chassis hardware components to ensure noise-resistant telemetry transmission.</li>
-        <li>Model custom mechanical mounting enclosures in Fusion 360 for DAQ subteam vehicle installations.</li>
+        <li>Design schematics and multi-layer PCBs in Altium and KiCad for sensor integration and data logging on an all-electric FSAE racecar.</li>
+        <li>Build wiring harnesses and model custom DAQ mounting enclosures in Fusion 360 for noise-resistant vehicle telemetry.</li>
+        <li>Integrate sensor and chassis-hardware components for reliable vehicle installation.</li>
       </ul>
     </div>
   </section>
@@ -247,13 +241,12 @@
         <span>Sep 2026</span>
       </div>
       <div class="item-sub">
-        <span>2-person team · Embedded Systems &amp; Wireless Sensing</span>
+        <span>2-person team &middot; Embedded Systems &amp; Wireless Sensing</span>
       </div>
       <ul>
-        <li>Designed and built an ESP32-based occupancy sensing prototype that scanned 2.4 GHz Wi‑Fi and Bluetooth traffic to measure packet counts and RSSI.</li>
-        <li>Developed low-level C++ firmware to compute a 0–100 density score representing how busy a space is based on signal activity and fluctuation.</li>
-        <li>Implemented calibration using temporary anchor points and an “empty mode” baseline stored in non-volatile memory to normalize measurements over time.</li>
-        <li>Integrated the embedded system with a Supabase backend and a partner-developed React/Node.js interface for visualizing occupancy trends.</li>
+        <li>Built an ESP32 occupancy-sensing prototype that scanned 2.4 GHz Wi-Fi and Bluetooth traffic for packet counts and RSSI.</li>
+        <li>Developed C++ firmware to compute a 0-100 density score from signal activity and fluctuation, calibrated against an empty-room baseline stored in nonvolatile memory.</li>
+        <li>Produced device measurements for a partner-developed Supabase and React/Node.js dashboard that visualized occupancy trends.</li>
       </ul>
     </div>
   </section>
