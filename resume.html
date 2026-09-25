@@ -168,6 +168,24 @@
   </section>
 
   <section>
+    <h2>Engineering Experience</h2>
+    <div class="block">
+      <div class="item-header">
+        <span>Virginia Motorsports (Formula SAE)</span>
+        <span>Fall 2025 - Present</span>
+      </div>
+      <div class="item-sub">
+        <span>Data Acquisition (DAQ) Subteam Member | University of Virginia</span>
+      </div>
+      <ul>
+        <li>Contributing to a redesign consolidating 5 discrete PCBs into a single centralized sensorboard handling 17 analog sensor inputs across 4 sensor types via Teensy, cutting wiring complexity and points of failure.</li>
+        <li>Design schematics and multi-layer PCBs in Altium and KiCad for sensor integration and data logging on an all-electric FSAE racecar.</li>
+        <li>Implementing SD card logging by accessing sensor readings directly from the shared DAQ struct, writing synchronized data across all 17 sensor channels to persistent storage.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
     <h2>Technical Projects</h2>
 
     <div class="block">
@@ -179,8 +197,8 @@
         <span>Embedded Hardware, Firmware &amp; Python Analytics &middot; Personal Project</span>
       </div>
       <ul>
-        <li>Designed and routed a custom ESP32 PCB with 3.7V LiPo-to-3.3V power management and interfaces for the IMU and MicroSD logger.</li>
-        <li>Built non-blocking C++ firmware to log 100 Hz BNO055 IMU quaternion and accelerometer data over I2C to SPI MicroSD storage.</li>
+        <li>Designed and routed a custom ESP32 PCB (~$20 in components) with 3.7V LiPo-to-3.3V power management and interfaces for the IMU and MicroSD logger.</li>
+        <li>Built non-blocking C++ firmware with button-triggered record/idle state control to log 100 Hz BNO055 IMU quaternion and accelerometer data over I2C, writing CSV output to SPI MicroSD storage.</li>
         <li>Created a Python telemetry engine using Matplotlib and SciPy to process raw quaternions, correct gravitational drift, estimate clubhead velocity, and render 3D swing trajectories.</li>
       </ul>
     </div>
@@ -210,25 +228,7 @@
       <ul>
         <li>Engineered a retrofit automated shutoff mechanism for standard sink handles without internal plumbing access.</li>
         <li>Integrated an ultrasonic distance sensor to detect user presence and trigger automated shutoff sequences.</li>
-        <li>Designed and calibrated a servo-driven mechanical arm to actuate the external water valve handle.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Engineering Experience</h2>
-    <div class="block">
-      <div class="item-header">
-        <span>Virginia Motorsports (Formula SAE)</span>
-        <span>Fall 2025 - Present</span>
-      </div>
-      <div class="item-sub">
-        <span>Data Acquisition (DAQ) Subteam Member | University of Virginia</span>
-      </div>
-      <ul>
-        <li>Design schematics and multi-layer PCBs in Altium and KiCad for sensor integration and data logging on an all-electric FSAE racecar.</li>
-        <li>Build wiring harnesses and model custom DAQ mounting enclosures in Fusion 360 for noise-resistant vehicle telemetry.</li>
-        <li>Integrate sensor and chassis-hardware components for reliable vehicle installation.</li>
+        <li>Designed and calibrated a servo-driven mechanical arm, triggered by ultrasonic distance readings detecting user movement, to actuate the external water valve handle.</li>
       </ul>
     </div>
   </section>
